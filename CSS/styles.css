@@ -1,0 +1,303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/*NAVBAR*/
+li {
+    list-style: none;
+}
+
+.uk-navbar-right .nav-menu .nav-item a {
+    text-decoration: none;
+}
+
+address, dl, fieldset, figure, ol, p, pre, ul {
+    margin: 0;
+}
+
+.uk-active {
+    text-decoration: underline;
+}
+
+.uk-logo {
+    width: 72px;
+}
+
+.uk-logo:hover {
+    opacity: .7;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.uk-navbar-right {
+    padding: 1%;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-item {
+    margin-left: 5rem;
+}
+
+.nav-link{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+}
+
+#uk-active { 
+    color: #FFC857;
+
+}
+
+/*NAVBAR-ITEMS LINE ANIMATION*/
+.nav-menu>.nav-item>.nav-link:hover {
+	color: #FFC857;
+}
+
+/*MAIN IMAGE*/
+.uk-overlay h1 {
+	padding: 2%;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 700;
+
+}
+
+.uk-overlay h1 span {
+	font-size: 4rem;
+}
+
+/*MAIN IMAGE-CURSOR*/
+.uk-overlay h2 {
+	font-family: 'Merriweather', serif;
+}
+
+#message {
+	font-size: 1.2rem;
+
+}
+
+.cursor {
+	display: inline-block;
+	height: 40px;
+	width: 2px;
+	background: white;
+	vertical-align: middle;
+	animation: 1s blink linear infinite;
+  }
+
+@keyframes blink {
+	0%,49% {
+		opacity: 0;
+	}
+	50%,100% {
+	  	opacity: 1;
+	}
+}
+
+/*MAIN IMAGE-BUTTON*/
+.uk-button {
+	border: 3px solid white;
+}
+
+/*MAIN-CARDS*/
+.wrapper {
+	display: flex;
+	width: 90%;
+	justify-content: space-around;
+}
+
+/*ABOUT-CARD*/
+.container-about {
+    padding: 2%;
+}
+
+div.card-about {
+    margin: 0;
+    padding: 2% 15%;
+    border-radius: 2%;
+}
+
+.uk-card-title {
+    font-family: 'Merriweather', serif;
+    font-weight: bold;
+}
+
+.about-photo {
+    border-radius: 2%;
+}
+
+/*CONTACT-CONTAINER*/
+.container-contact {
+    position: relative;
+}
+
+.blurred-contact {
+    height: 100vh;
+    background-image: url(../img/top-view-of-chat-bubbles-with-telephone-receiver-and-copy-space.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: grayscale(100%);
+    transition-duration: 500ms;   
+}
+
+.blurred-contact:hover {
+    filter: grayscale(0%);
+    transition-duration: 500ms;
+}
+
+/*CONTACT-CARD*/
+div.card-contact {
+    border-radius: 2%;
+    position: absolute;
+}
+
+h3.contact-title {
+    text-align: center;
+}
+
+div.contact-body {
+    text-align: center;
+}
+
+.contact-icon:hover {
+    color: #FFC857;
+}
+
+
+
+/*MEDIA QUERIES*/
+    /*****XLARGE - min-width:1200px*****/
+@media (min-width:1200px) {
+    /*CARD*/
+    .card-commentary {
+        font-size: 0.9rem;
+    }
+}
+    /*****LARGE - between 960px and 1199 px*****/
+@media (min-width: 960px) and (max-width: 1199px) {
+    /*CARD*/
+    #card-overlay {
+        padding: 1.2rem;
+    }
+
+    .card-commentary {
+        font-size: 0.7rem;
+    }
+}
+	/*****MEDIUM - between 641px and 959px*****/
+@media (min-width: 641px) and (max-width: 959px) {
+    /*NAV*/
+    .uk-logo {
+        height: 2rem;
+    }
+
+    li.nav-item {
+        font-size: 0.1rem;
+    }
+    
+    /*CARD*/
+    .card-commentary {
+        font-size: 0.7rem;
+    }
+}
+	/*****SMALL - between px and 640px*****/
+@media only screen and (max-width: 640px) {
+    /*NAV*/
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 12rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+        z-index: 1;
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 2.5rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin: auto;
+
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    /*MAIN IMAGE*/
+    .uk-overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .uk-overlay h1 span {
+        font-size: 2.5rem;
+    }
+
+    .uk-overlay h2 {
+        font-family: 'Merriweather', serif;
+        font-size: 1.2rem;
+    }
+    
+    #message {
+        font-size: 0.8rem;
+    
+    }
+
+    .uk-button {
+        font-size: 0.6rem;
+    }
+
+}
+	/*****XSMALL - less than 576px*****/
+@media (max-width: 576px) {
+}
