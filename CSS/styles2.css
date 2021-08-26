@@ -361,6 +361,12 @@ div.contact-body {
     padding: 2%;
 }
 
+/*PORTFOLIO - MANSA CAVA*/
+.text-mansacava {
+    color: black;
+    font-weight: bold;
+}
+
 /*MEDIA QUERIES*/
     /*****XLARGE - min-width:1200px*****/
 @media (min-width:1200px) {
