@@ -521,4 +521,9 @@ div.contact-body {
         max-width: 250px;
     }
 
+    /*ABOUT*/
+    div.card-about {
+        padding: 0;
+    }
+
 }
