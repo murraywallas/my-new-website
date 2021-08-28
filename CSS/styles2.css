@@ -526,4 +526,49 @@ div.contact-body {
         padding: 0;
     }
 
+    /*PORTFOLIO-EDEMSA*/
+    h1 {
+        font-size: 1.4rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    h5 {
+        font-size: 0.9rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    li {
+        font-size: 0.8rem;
+    }
+
+    figure {
+        display: none;
+    }
+
+    /*.uk-column-1-4 {
+        column-count: 1;
+    }*/
+
+    #card {
+        margin: auto;
+    }
+
+
+
+
+
 }
